@@ -1,0 +1,197 @@
+/* 1. BASIC RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. PAGE BACKGROUND AND TEXT */
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* 3. HEADER */
+header {
+  background: #172554;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  border-radius: 16px;
+  margin: 0 auto 25px;
+  max-width: 800px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #cbd5e1;
+}
+
+/* 4. MAIN LAYOUT */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 5. GENERAL SECTION CARDS */
+section {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+}
+
+section h2 {
+  font-size: 21px;
+  
+}
+
+/* 6. BALANCE SUMMARY */
+.balance-section {
+  text-align: center;
+}
+
+#total-balance {
+  font-size: 34px;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 18px;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.income-card,
+.expense-card {
+  padding: 15px 10px;
+  border-radius: 12px;
+}
+
+.income-card {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.expense-card {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.summary-cards h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.summary-cards p {
+  font-size: 20px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+/* 7. FORM INPUTS */
+#transaction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#transaction-form label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+#transaction-form input,
+#transaction-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font-size: 16px;
+  background: white;
+  color: #0f172a;
+}
+
+#transaction-form input:focus,
+#transaction-form select:focus {
+  outline: 2px solid #2563eb;
+  border-color: #2563eb;
+}
+
+/* 8. BUTTON */
+#transaction-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 9px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 10px;
+}
+
+#transaction-form button:hover {
+  background: #1d4ed8;
+}
+
+#transaction-list {
+  list-style: none;
+}
+
+#transaction-list li {
+  padding: 13px;
+  border-bottom: 1px solid #e2e8f0;
+  overflow-wrap: anywhere;
+}
+
+#transaction-list li:last-child {
+  border-bottom: none;
+}
+
+#empty-message {
+  color: #64748b;
+  text-align: center;
+}
+
+/* 10. MOBILE RESPONSIVENESS */
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  header h1 {
+    font-size: 23px;
+  }
+
+  section {
+    padding: 16px;
+  }
+
+  #total-balance {
+    font-size: 29px;
+  }
+
+  .summary-cards {
+    gap: 9px;
+  }
+  .summary-cards h3 {
+    font-size: 12px;
+  }
+
+  .summary-cards p {
+    font-size: 17px;
+  }
+}
